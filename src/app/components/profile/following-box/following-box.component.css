@@ -1,0 +1,59 @@
+div.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div.title span {
+    font-size: 25px;
+    font-family: 'Mukta', sans-serif;
+}
+
+div.title span mat-icon {
+    vertical-align: -4px;
+    margin-right: 1rem;
+}
+
+section.content {
+    width: 100%;
+    height: 100%;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: right;
+}
+
+section.content div.item {
+    width: 100%;
+    height: 70px;
+    z-index: 3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+section.content div.item img{
+    width: 50px;
+}
+
+section.content div.item div.info{
+    height: auto;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+section.content div.item div.info span:first-child {
+    font-family: 'Mukta', sans-serif;
+    font-size: 17px;
+}
+
+section.content div.item div.info span:last-child {
+    font-size: 15px;
+    margin-top: 0.5rem;
+}

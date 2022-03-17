@@ -1,0 +1,46 @@
+div.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div.title span {
+    font-size: 25px;
+    font-family: 'Mukta', sans-serif;
+}
+
+div.title span mat-icon {
+    vertical-align: -4px;
+    margin-right: 1rem;
+}
+
+section.content {
+    width: 100%;
+    height: 100%;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: right;
+}
+
+section.content div.item {
+    margin-top: 1rem;
+    width: 100%;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+}
+
+section.content div.item img {
+    width: 40px;
+}
+
+section.content div.item span {
+    font-family: 'Titillium Web', sans-serif;
+    margin-left: 1rem;
+}
+
+section.content div.item span.shop {
+    color: rgb(150,10,10);
+}

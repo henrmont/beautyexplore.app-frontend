@@ -1,0 +1,89 @@
+div.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div.title span {
+    font-size: 25px;
+    font-family: 'Mukta', sans-serif;
+}
+
+div.title span mat-icon {
+    vertical-align: -4px;
+    margin-right: 1rem;
+}
+
+section.messages {
+    width: 100%;
+    height: 90%;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 1rem;
+    margin-top: 1rem;
+}
+
+section.messages div.menu {
+    width: 100%;
+    height: 100%;
+    border-right: 1px solid rgb(100,100,100);
+}
+
+section.messages div.menu  mat-list mat-list-item button{
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    font-size: 16px;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: bold;
+    /* font-family: 'Mukta', sans-serif; */
+
+}
+
+section.messages div.menu  mat-list mat-list-item button img {
+    margin-right: 1rem;
+    width: 30px;
+}
+
+section.messages div.content {
+    padding: 1rem 0;
+}
+
+section.messages div.content div.box-messages {
+    width: 100%;
+    height: 88%;
+}
+
+section.messages div.content div.box-messages div.send {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+section.messages div.content div.box-messages div.send span {
+    background-color: rgb(180,180,220);
+    padding: 10px;
+    border-radius: 10px;
+    margin: 5px 0;
+}
+
+section.messages div.content div.box-messages div.receive {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+section.messages div.content div.box-messages div.receive span {
+    background-color: rgb(220,220,220);
+    padding: 10px;
+    border-radius: 10px;
+    margin: 5px 0;
+}
+
+section.messages div.content div.input {
+    width: 100%;
+}
+
+section.messages div.content div.input mat-form-field {
+    width: 80%;
+}

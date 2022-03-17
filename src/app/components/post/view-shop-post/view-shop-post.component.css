@@ -1,0 +1,239 @@
+div.post {
+    display: grid;
+    grid-template-columns: 600px calc(100% - 600px);
+    width: 100%;
+    height: auto;
+    margin-top: 4rem;
+}
+
+div.post:first-child {
+    margin-top: 0;
+}
+
+div.post div {
+    width: 100%;
+    height: 600px;
+}
+
+div.post div.media {
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+
+div.post div.media div.title {
+    position: absolute;
+    top: 0;
+    width: 90%;
+    height: 70px;
+    padding: 0 5%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div.post div.media div.title div.owner{
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div.post div.media div.title div.owner img{
+    width: 50px;
+}
+
+div.post div.media div.title button{
+    color: white;
+}
+
+div.post div.media div.title div.owner div.info{
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-left: 1rem;
+    color: white;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+div.post div.media div.title div.owner div.info span:first-child {
+    font-family: 'Mukta', sans-serif;
+    font-size: 20px;
+}
+
+div.post div.media div.title div.owner div.info span:last-child mat-icon {
+    font-size: 15px;
+    vertical-align: -2px;
+    margin-top: 0.5rem;
+}
+
+div.post div.media gallery {
+    width: 600px;
+    height: 600px;
+}
+
+/* div.post div.media ng-image-slider {
+    margin-left: -1px;
+} */
+
+div.post div.resource {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+div.post div.resource div {
+    width: 100%;
+}
+
+div.post div.resource div.desc {
+    width: 90%;
+    padding: 0 5%;
+    height: 70px;
+    background-color: rgb(30,30,30);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+div.post div.resource div.actions button.action mat-icon {
+    color: rgb(150,150,150);
+}
+
+div.post div.resource div.actions {
+    height: 70px;
+    background-color: rgb(30,30,30);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 20px;
+}
+
+div.post div.resource div.comments  {
+    height: calc(100% - 140px);
+    background-color: rgb(50,50,50);
+    /* overflow-y:scroll; */
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: flex-start;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+div.post div.resource div.comments div.price {
+    width: 80%;
+    height: auto;
+    padding: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-family: 'Mukta', sans-serif;
+}
+
+div.post div.resource div.comments div.price span:first-child {
+    width: 100%;
+    text-align: right;
+    font-size: 40px;
+    color: rgb(150,150,150)
+}
+
+div.post div.resource div.comments div.price span:last-child {
+    width: 100%;
+    text-align: right;
+    margin-top: 3rem;
+    padding-bottom: 2rem;
+    font-size: 70px;
+    color: orange;
+    text-shadow: 0 0 10px rgb(255, 190, 94);
+    border-bottom: 2px solid rgb(150,150,150);
+}
+
+div.post div.resource div.comments div.evalute {
+    width: 80%;
+    height: auto;
+    padding:  0 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Mukta', sans-serif;
+}
+
+div.post div.resource div.comments div.evalute span.title {
+    font-size: 25px;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+div.post div.resource div.comments div.evalute span.title mat-icon {
+    vertical-align: -4px;
+    margin-right: 1rem;
+}
+
+div.post div.resource div.comments div.evalute div.range {
+    padding: .5rem 0;
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr;
+    column-gap: 20px;
+    justify-content: center;
+    align-items: center;
+    color: rgb(150,150,150);
+}
+
+div.post div.resource div.comments div.evalute div.range span:first-child {
+    width: 100%;
+    font-size: 30px;
+    text-align: right;
+}
+
+div.post div.resource div.comments div.evalute div.range span:first-child mat-icon {
+    vertical-align: -3px;
+}
+
+div.post div.resource div.comments div.evalute div.range span:last-child {
+    width: 100%;
+    font-size: 15px;
+    text-align: right;
+}
+
+div.post div.resource div.comment {
+    width: 100%;
+    /* padding: 0 5%; */
+    height: 100px;
+    background-color: rgba(0,0,0,0.3);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    justify-items: center;
+}
+
+div.post div.resource div.comment div.field {
+    margin: auto 0;
+    height: 100%;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.post div.resource div.comment div.field mat-form-field {
+    margin-top: 1rem;
+    height: auto;
+    width: 100%;
+}
+
+
+div.post div.resource div.comment div.emoji {
+    height: 100%;
+    width: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

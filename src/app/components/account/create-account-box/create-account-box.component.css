@@ -1,0 +1,29 @@
+.createAccountBox {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+.createAccountBox div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.createAccountBox div img {
+    width: 100px;
+}
+
+.createAccountBox div span {
+    font-family: 'Spartan', sans-serif;
+    color: rgb(50,50,50);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 1rem 0;
+}
+
+.createAccountBox div span::first-letter {
+    color: rgb(251,80,80);
+}

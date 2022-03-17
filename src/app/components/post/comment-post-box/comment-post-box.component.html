@@ -1,0 +1,22 @@
+<div class="title">
+    <span><mat-icon>chat_bubble_outline</mat-icon> Comentário</span>
+</div>
+
+<section class="comment">
+    <mat-form-field color="accent" appearance="outline">
+        <mat-label>Comentar</mat-label>
+        <textarea matInput rows="2" [(ngModel)]="comment"></textarea>
+    </mat-form-field>
+    <div class="resource">
+        <button mat-icon-button
+            matSuffix
+            (click)="toggled = !toggled"
+            [(emojiPickerIf)]="toggled"
+            [emojiPickerDirection]="'right'"
+            (emojiPickerSelect)="handleSelection($event)"
+        ><mat-icon color="accent">sentiment_satisfied_alt</mat-icon>
+        </button>
+        <button mat-flat-button color="accent">Comentar</button>
+    </div>
+</section>
+

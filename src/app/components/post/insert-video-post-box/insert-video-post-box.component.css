@@ -1,0 +1,24 @@
+.file-input {
+    display: none;
+}
+
+h3 {
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+}
+
+.video-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.video-container button {
+    width: 30%;
+    margin-top: 2rem;
+}
+
+.video-container button mat-icon {
+    margin-right: 1rem;
+}

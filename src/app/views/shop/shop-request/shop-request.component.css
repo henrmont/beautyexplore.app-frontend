@@ -1,0 +1,157 @@
+:host {
+    margin: 1rem 0;
+}
+
+section.title {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+section.title span {
+    font-size: 25px;
+    font-family: 'Mukta', sans-serif;
+}
+
+section.title span mat-icon {
+    vertical-align: -4px;
+    margin-right: 1rem;
+}
+
+section.content {
+    width: 100vh;
+}
+
+section.content div.request {
+    width: 90%;
+    padding: 5%;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+section.content mat-icon {
+    vertical-align: -5px;
+    margin-right: 1rem;
+}
+
+section.content div.title, section.content div.info {
+    padding: 1rem 0;
+}
+
+section.content div.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+    font-family: 'Mukta', sans-serif;
+}
+
+section.content div.info {
+    width: 100%;
+    z-index: 3;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 3rem;
+    border-bottom: 1px solid gray;
+}
+
+section.content div.info:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+section.content div.info img{
+    width: 50px;
+}
+
+section.content div.info div{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    font-family: 'Titillium Web', sans-serif;
+    margin-left: 1rem;
+}
+
+section.content div.info div span:first-child {
+    font-family: 'Mukta', sans-serif;
+    font-size: 17px;
+}
+
+section.content div.info div span:last-child {
+    font-size: 15px;
+    margin-top: 0.5rem;
+}
+
+section.content div.total, section.content div.payment {
+    justify-content: space-around;
+    padding-left: 0;
+}
+
+section.content div.total span:first-child {
+    font-size: 20px;
+}
+
+section.content div.total span:last-child {
+    font-size: 25px;
+}
+
+section.content div.payment span:first-child {
+    font-size: 20px;
+}
+
+section.content div.payment span:last-child {
+    font-size: 20px;
+}
+
+section.content div.address {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+}
+
+section.content div.address div.col2 {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+section.content div.address div.col3 {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+section.content div.address div.col2 span, section.content div.address div.col3 span {
+    font-size: 15px;
+    font-family: 'Titillium Web', sans-serif;
+    display: flex;
+    justify-items: center;
+    margin-top: 0.5rem;
+}
+
+section.content div.request div.confirm{
+    display: flex;
+    justify-content: space-around;
+}
+
+section.content div.request div.buttons {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+
+
+
+

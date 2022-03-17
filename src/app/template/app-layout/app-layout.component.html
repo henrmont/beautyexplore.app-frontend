@@ -1,0 +1,10 @@
+<mat-sidenav-container class="mat-app-background" [ngClass]="{'dark-theme-mode':darkTheme}">
+    <mat-sidenav #sidenav role="navigation">
+        <app-app-layout-sidenav (sidenavClose)="sidenav.close()" (setDarkTheme)="changeTheme($event)"></app-app-layout-sidenav>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <app-app-layout-header (sidenavToggle)="sidenav.toggle()"></app-app-layout-header>
+        <app-app-layout-nav [destack]="destack"></app-app-layout-nav>
+        <app-app-layout-news *ngIf="destack"></app-app-layout-news>
+    </mat-sidenav-content>
+</mat-sidenav-container>

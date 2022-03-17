@@ -1,0 +1,32 @@
+:host {
+    margin-top: 1rem;
+    margin-left: 1rem;
+    width: calc(100% - 300px - 2.5rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media screen and (max-width: 1200px) {
+    :host {
+        width: 100%;
+        margin: 1rem;
+    }
+}
+
+div.vp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    margin-bottom: 5rem;
+    padding: 0;
+}
+
+div.vp app-view-post {
+    width: 100%;
+}
+
+div.divider {
+    height: 50px;
+}

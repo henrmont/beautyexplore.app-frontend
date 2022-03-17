@@ -1,0 +1,127 @@
+<section class="title">
+    <span><mat-icon>local_shipping</mat-icon> Pedidos</span>
+  </section>
+  
+<section class="content">
+    <mat-card>
+        <div>
+            <div class="title">
+                <span><mat-icon>person</mat-icon> Usuário</span>
+            </div>
+            <div class="info">
+                <img src="assets/demo/profile1.png" class="mat-elevation-z4">
+                <div>
+                    <span>@michelyxi</span>
+                    <span>Michely Ximenes</span>
+                </div>
+            </div>
+
+            <div class="title">
+                <span><mat-icon>inventory_2</mat-icon> Conteúdo</span>
+                <button mat-flat-button color="warn">Ver itens</button>
+            </div>
+            <div class="info total">
+                <span>Total</span>
+                <span class="total">
+                BRL 399,00
+                </span>
+            </div>
+
+            <div class="title">
+                <span><mat-icon>room</mat-icon> Endereço</span>
+            </div>
+            <div class="info address">
+                <div class="col2">
+                    <span>Conjunto Valparaiso Quadra 6</span>
+                    <span>Número 1</span>
+                </div>
+                <div class="col2">
+                    <span>Prox. a papelaria presart</span>
+                    <span>CEP: 67113-440</span>
+                </div>
+                <div class="col3">
+                    <span>Coqueiro</span>
+                    <span>Ananindeua</span>
+                    <span>PA</span>
+                </div>
+            </div>
+
+            <div class="title">
+                <span><mat-icon>payments</mat-icon> Pagamento</span>
+            </div>
+            <div class="info payment">
+                <span><mat-icon>pix</mat-icon> Pix</span>
+                <span>Troco: BRL 50,00</span>
+            </div>
+        </div>
+           
+        <div>
+            
+            <mat-stepper orientation="vertical" [linear]="isLinear" #stepper color="accent">
+              <mat-step [stepControl]="firstFormGroup">
+                <form [formGroup]="firstFormGroup">
+                  <ng-template matStepLabel>Confirmação do pedido</ng-template>
+                  
+                  <div class="confirm">
+                    <button mat-flat-button color="accent">
+                      <mat-icon>done</mat-icon>
+                      Aceitar
+                    </button>
+                    <button mat-flat-button color="warn">
+                      <mat-icon>close</mat-icon>
+                      Recusar
+                    </button>
+                  </div>
+                  
+                  <div class="buttons">
+                    <button mat-button matStepperNext>Next</button>
+                  </div>
+                </form>
+              </mat-step>
+              <mat-step [stepControl]="secondFormGroup">
+                <form [formGroup]="secondFormGroup">
+                  <ng-template matStepLabel>Separação do pedido</ng-template>
+                  
+                  <div class="confirm">
+                    <button mat-flat-button color="accent">
+                      <mat-icon>done</mat-icon>
+                      Confirmar pedido separado
+                    </button>
+                  </div>
+
+                  <div class="buttons">
+                    <button mat-button matStepperPrevious>Back</button>
+                    <button mat-button matStepperNext>Next</button>
+                  </div>
+                </form>
+              </mat-step>
+              <mat-step [stepControl]="thirdFormGroup">
+                <form [formGroup]="thirdFormGroup">
+                  <ng-template matStepLabel>Entrega do pedido</ng-template>
+                  
+                  <div class="confirm">
+                    <button mat-flat-button color="accent">
+                      <mat-icon>done</mat-icon>
+                      Confirmar entrega do pedido
+                    </button>
+                  </div>
+
+                  <div class="buttons">
+                    <button mat-button matStepperPrevious>Back</button>
+                    <button mat-button matStepperNext>Next</button>
+                  </div>
+                </form>
+              </mat-step>
+              <mat-step>
+                <ng-template matStepLabel>Pedido Finalizado</ng-template>
+                
+                <div class="confirm">
+                  <span>Pedido finalizado com sucesso</span>
+                </div>
+              </mat-step>
+            </mat-stepper>
+            
+        </div>
+    </mat-card>
+  
+  </section>

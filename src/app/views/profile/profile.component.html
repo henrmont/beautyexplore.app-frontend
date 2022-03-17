@@ -1,0 +1,234 @@
+<section class="profile">
+    <img src="assets/demo/profile.png" class="mat-elevation-z8">
+    <div class="title">
+        <span>@pauferoficial</span>
+        <span>Paula Ferrreira</span>
+        <div class="gradient"></div>
+    </div>
+    <div class="info">
+        <span>32 posts</span>
+        <button mat-flat-button color="accent" (click)="openFollowing()">100 seguidores</button>
+        <button mat-flat-button color="accent" (click)="openFollow()">100 seguindo</button>
+    </div>
+    <p>"Não sei quem pintou o céu, quero saber se sobrou tinta"</p>
+
+    <mat-tab-group mat-align-tabs="center" color="accent" [dynamicHeight]="true">
+        <mat-tab>
+          <ng-template mat-tab-label>
+            <mat-icon class="example-tab-icon">photo_library</mat-icon>
+            Posts
+          </ng-template>
+          <div class="content">
+
+            <div class="mat-elevation-z8">
+                <button mat-button (click)="openModal()" style="background-image: url(assets/demo/demo1.png);">
+                  <div class="price onlyi">
+                    <span>BRL</span>
+                    <span>9,99</span>
+                  </div>
+                </button>
+              </div>
+              
+                <div class="mat-elevation-z8">
+                  <button mat-button (click)="openModal()">
+                    <div class="price onlyi">
+                      <span>BRL</span>
+                      <span>1.800,00</span>
+                    </div>
+                    <video src="assets/demo/video2.mp4" autoplay [muted]="true"></video>
+                  </button>
+                </div>
+                <div class="mat-elevation-z8">
+                  <button mat-button (click)="openModal()" style="background-image: url(assets/demo/demo2.png);">
+                    <div class="price onlyi">
+                      <span>BRL</span>
+                      <span>12,50</span>
+                    </div>
+                  </button>
+                </div>
+                <div class="mat-elevation-z8">
+                  <button mat-button (click)="openModal()" style="background-image: url(assets/demo/demo3.png);">
+                    <div class="price onlyi">
+                      <span>BRL</span>
+                      <span>400,00</span>
+                    </div>
+                  </button>
+                </div>
+                <div class="mat-elevation-z8">
+                  <button mat-button (click)="openModal()" style="background-image: url(assets/demo/demo4.png);">
+                    <div class="price onlyi">
+                      <span>BRL</span>
+                      <span>29,99</span>
+                    </div>
+                  </button>
+                </div>
+                <div class="mat-elevation-z8">
+                  <button mat-button (click)="openModal()" style="background-image: url(assets/demo/demo1.png);">
+                    <div class="price onlyi">
+                      <span>BRL</span>
+                      <span>199,99</span>
+                    </div>
+                  </button>
+                </div>
+                <div class="mat-elevation-z8">
+                  <button mat-button (click)="openModal()">
+                    <div class="price onlyi">
+                      <span>BRL</span>
+                      <span>17.299,99</span>
+                    </div>
+                    <video src="assets/demo/video.mp4" autoplay [muted]="true"></video>
+                  </button>
+                </div>
+                
+          </div>
+        </mat-tab>
+
+        <mat-tab>
+            <ng-template mat-tab-label>
+              <mat-icon class="example-tab-icon">alternate_email</mat-icon>
+              Marcado
+            </ng-template>
+            
+            <div class="content">
+
+                <div class="mat-elevation-z8">
+                    <button mat-button (click)="openModal()" style="background-image: url(assets/demo/demo1.png);">
+                      <div class="price onlyi">
+                        <span>BRL</span>
+                        <span>9,99</span>
+                      </div>
+                    </button>
+                  </div>
+                  
+                    <div class="mat-elevation-z8">
+                      <button mat-button (click)="openModal()">
+                        <div class="price onlyi">
+                          <span>BRL</span>
+                          <span>1.800,00</span>
+                        </div>
+                        <video src="assets/demo/video2.mp4" autoplay [muted]="true"></video>
+                      </button>
+                    </div>
+                    <div class="mat-elevation-z8">
+                      <button mat-button (click)="openModal()" style="background-image: url(assets/demo/demo2.png);">
+                        <div class="price onlyi">
+                          <span>BRL</span>
+                          <span>12,50</span>
+                        </div>
+                      </button>
+                    </div>
+                    
+              </div>
+
+        </mat-tab>
+
+        <mat-tab>
+            <ng-template mat-tab-label>
+              <mat-icon class="example-tab-icon">sell</mat-icon>
+              Produtos
+            </ng-template>
+            
+            <div class="content">
+
+                    <div class="mat-elevation-z8">
+                      <button mat-button (click)="openShopModal()" style="background-image: url(assets/demo/demo3.png);">
+                        <div class="price">
+                          <span>BRL</span>
+                          <span>400,00</span>
+                        </div>
+                      </button>
+                    </div>
+                    <div class="mat-elevation-z8">
+                      <button mat-button (click)="openShopModal()" style="background-image: url(assets/demo/demo4.png);">
+                        <div class="price">
+                          <span>BRL</span>
+                          <span>29,99</span>
+                        </div>
+                      </button>
+                    </div>
+                    <div class="mat-elevation-z8">
+                      <button mat-button (click)="openShopModal()" style="background-image: url(assets/demo/demo1.png);">
+                        <div class="price">
+                          <span>BRL</span>
+                          <span>199,99</span>
+                        </div>
+                      </button>
+                    </div>
+                    <div class="mat-elevation-z8">
+                      <button mat-button (click)="openShopModal()">
+                        <div class="price">
+                          <span>BRL</span>
+                          <span>17.299,99</span>
+                        </div>
+                        <video src="assets/demo/video.mp4" autoplay [muted]="true"></video>
+                      </button>
+                    </div>
+                    
+              </div>
+
+        </mat-tab>
+      
+        <mat-tab>
+          <ng-template mat-tab-label>
+            <mat-icon class="example-tab-icon">bookmarks</mat-icon>
+            Salvos
+          </ng-template>
+          
+          <div class="content">
+
+            
+                <div class="mat-elevation-z8">
+                  <button mat-button (click)="openModal()" style="background-image: url(assets/demo/demo2.png);">
+                    <div class="price onlyi">
+                      <span>BRL</span>
+                      <span>12,50</span>
+                    </div>
+                  </button>
+                </div>
+                <div class="mat-elevation-z8">
+                  <button mat-button (click)="openModal()" style="background-image: url(assets/demo/demo3.png);">
+                    <div class="price onlyi">
+                      <span>BRL</span>
+                      <span>400,00</span>
+                    </div>
+                  </button>
+                </div>
+                
+          </div>
+
+        </mat-tab>
+      
+        <mat-tab>
+          <ng-template mat-tab-label>
+            <mat-icon class="example-tab-icon">video_library</mat-icon>
+            beauTV
+          </ng-template>
+      
+          <div class="content">
+
+                <div class="mat-elevation-z8">
+                  <button mat-button (click)="openModal()">
+                    <div class="price onlyi">
+                      <span>BRL</span>
+                      <span>1.800,00</span>
+                    </div>
+                    <video src="assets/demo/video2.mp4" autoplay [muted]="true"></video>
+                  </button>
+                </div>
+                
+                <div class="mat-elevation-z8">
+                  <button mat-button (click)="openModal()">
+                    <div class="price onlyi">
+                      <span>BRL</span>
+                      <span>17.299,99</span>
+                    </div>
+                    <video src="assets/demo/video.mp4" autoplay [muted]="true"></video>
+                  </button>
+                </div>
+                
+          </div>
+
+        </mat-tab>
+
+      </mat-tab-group>
+</section>

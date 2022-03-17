@@ -1,0 +1,116 @@
+:host {
+    margin-top: 1rem;
+    margin-left: 1rem;
+    width: calc(100% - 300px - 2.5rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media screen and (max-width: 1200px) {
+    :host {
+        width: 100%;
+        margin: 1rem;
+    }
+}
+
+div.transmission {
+    position: relative;
+    width: 600px;
+    height: 600px;
+    margin-bottom: 5rem;
+}
+
+div.transmission div.title {
+    position: absolute;
+    top: 0;
+    width: 90%;
+    height: 70px;
+    padding: 0 5%;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div.transmission div.title div.owner{
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div.transmission div.title div.owner img{
+    width: 50px;
+}
+
+div.transmission div.title div.owner div.info{
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-left: 1rem;
+    color: white;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+div.transmission div.title div.owner div.info span:first-child {
+    font-family: 'Mukta', sans-serif;
+    font-size: 20px;
+}
+
+div.transmission div.title div.owner div.info span:last-child mat-icon {
+    font-size: 15px;
+    vertical-align: -2px;
+    margin-top: 0.5rem;
+}
+
+div.transmission div.title button {
+    color: rgb(100, 255, 100);
+    font-size: 20px;
+}
+
+div.transmission div.title button mat-icon {
+    vertical-align: -5px;
+    margin-right: 0.5rem;
+}
+
+div.transmission button.watch {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+    border-radius: 0;
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+
+div.transmission button.watch mat-icon {
+    opacity: .7;
+    color: rgb(200,10,10);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 150px;
+    text-shadow: 0 0 20px white;
+}
+
+div.transmission div.subtitle {
+    position: absolute;
+    bottom: 0;
+    width: 90%;
+    height: 70px;
+    padding: 0 5%;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 17px;
+    color: rgb(230,230,230);
+}

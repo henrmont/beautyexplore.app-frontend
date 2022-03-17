@@ -1,0 +1,212 @@
+<section class="title">
+  <span><mat-icon>leaderboard</mat-icon> Dashboard</span>
+</section>
+
+<section class="dashboard">
+    <mat-tab-group mat-align-tabs="center" color="accent" [dynamicHeight]="true">
+
+      <mat-tab>
+        <ng-template mat-tab-label>
+          <mat-icon class="example-tab-icon">dashboard</mat-icon>
+          Visão geral
+        </ng-template>
+
+        <div class="overview">
+          <div class="first-column">
+            <div class="dashitem mat-elevation-z8">
+              <div class="dashtitle">
+                <mat-icon>currency_exchange</mat-icon> 
+                <span>Montante mensal</span>
+              </div>
+              <div class="dashcontent">
+                <span>BRL</span>
+                <span>15.670,96</span>
+              </div>
+            </div>
+            <div class="dashitem mat-elevation-z8">
+              <div class="dashtitle">
+                <mat-icon>star_outline</mat-icon> 
+                <span>Avaliação média</span>
+              </div>
+              <div class="dashevalute">
+                <span>4.8</span>
+              </div>
+            </div>
+          </div>
+          <div class="last-column mat-elevation-z8">
+            <div class="dashtitle">
+              <mat-icon>today</mat-icon> 
+              <span>Vendas na semana</span>
+            </div>
+            <div class="content">
+              <div>
+                <span>
+                  13/03 (Segunda)
+                </span>
+                <div class="daily">
+                  <span>BRL</span>
+                  <span class="high">5.460,00</span>
+                </div>
+                <span class="high2">
+                  17%
+                </span>
+              </div>
+              <div>
+                <span>
+                  14/03 (Terça)
+                </span>
+                <div class="daily">
+                  <span>BRL</span>
+                  <span class="high">5.460,00</span>
+                </div>
+                <span class="high2">
+                  17%
+                </span>
+              </div>
+              <div>
+                <span>
+                  15/03 (Quarta)
+                </span>
+                <div class="daily">
+                  <span>BRL</span>
+                  <span class="high">5.460,00</span>
+                </div>
+                <span class="high2">
+                  17%
+                </span>
+              </div>
+              <div>
+                <span>
+                  16/03 (Quinta)
+                </span>
+                <div class="daily">
+                  <span>BRL</span>
+                  <span class="high">5.460,00</span>
+                </div>
+                <span class="high2">
+                  17%
+                </span>
+              </div>
+              <div>
+                <span>
+                  17/03 (Sexta)
+                </span>
+                <div class="daily">
+                  <span>BRL</span>
+                  <span class="high">5.460,00</span>
+                </div>
+                <span class="high2">
+                  17%
+                </span>
+              </div>
+              <div>
+                <span>
+                  18/03 (Sábado)
+                </span>
+                <div class="daily">
+                  <span>BRL</span>
+                  <span class="high">5.460,00</span>
+                </div>
+                <span class="high2">
+                  17%
+                </span>
+              </div>
+              <div>
+                <span>
+                  19/03 (Domingo)
+                </span>
+                <div class="daily">
+                  <span>BRL</span>
+                  <span class="high">5.460,00</span>
+                </div>
+                <span class="high2">
+                  17%
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </mat-tab>
+
+        <mat-tab>
+            <ng-template mat-tab-label>
+              <mat-icon class="example-tab-icon">pie_chart</mat-icon>
+              Produtos no mês
+            </ng-template>
+  
+            <div class="content">
+              <ngx-charts-pie-chart
+                  [view]="view"
+                  [results]="pie"
+                  [gradient]="gradient"
+                  [legend]="showLegend"
+                  [doughnut]="isDoughnut"
+                  (select)="onSelect($event)"
+                  (activate)="onActivate($event)"
+                  (deactivate)="onDeactivate($event)"
+                  style="fill: gray"
+                  >
+              </ngx-charts-pie-chart>
+            </div>
+  
+          </mat-tab>
+        
+        <mat-tab>
+          <ng-template mat-tab-label>
+            <mat-icon class="example-tab-icon">bar_chart</mat-icon>
+            Comparação semanal
+          </ng-template>
+
+          <div class="content">
+            <ngx-charts-bar-vertical-2d
+              [view]="view"
+              [scheme]="colorScheme"
+              [results]="bar"
+              [gradient]="gradient"
+              [xAxis]="showXAxis"
+              [yAxis]="showYAxis"
+              [legend]="showLegend"
+              [showXAxisLabel]="showXAxisLabel"
+              [showYAxisLabel]="showYAxisLabel"
+              xAxisLabel="Dia da semana"
+              yAxisLabel="Montante (BRL)"
+              [legendTitle]="legendTitle"
+              (select)="onSelect($event)"
+              (activate)="onActivate($event)"
+              (deactivate)="onDeactivate($event)">
+            </ngx-charts-bar-vertical-2d>
+          </div>
+
+        </mat-tab>
+
+        <mat-tab>
+            <ng-template mat-tab-label>
+              <mat-icon class="example-tab-icon">auto_graph</mat-icon>
+              Mensal / Anual
+            </ng-template>
+  
+            <div class="content">
+                <ngx-charts-line-chart
+                    [view]="view"
+                    [scheme]="colorScheme"
+                    [showXAxisLabel]="showXAxisLabel"
+                    [showYAxisLabel]="showYAxisLabel"
+                    [showGridLines]="false"
+                    [xAxis]="xAxis"
+                    [yAxis]="yAxis"
+                    xAxisLabel="Mês"
+                    yAxisLabel="Montante"
+                    [results]="mesano"
+                    (select)="onSelect($event)"
+                    (activate)="onActivate($event)"
+                    (deactivate)="onDeactivate($event)"
+                    style="fill: gray;"
+                    >
+                </ngx-charts-line-chart>
+            </div>
+  
+          </mat-tab>
+      
+    </mat-tab-group>
+</section>

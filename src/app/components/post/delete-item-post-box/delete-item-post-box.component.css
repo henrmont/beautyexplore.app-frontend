@@ -1,0 +1,25 @@
+h2 {
+    width: 100%;
+    text-align: center;
+}
+
+div {
+    display: flex;
+    justify-content: space-between;
+}
+
+div button {
+    width: 40%;
+}
+
+div button mat-icon {
+    margin-right: .5rem;
+}
+
+div button:first-child {
+    background-color: rgb(255, 170, 170);
+}
+
+div button:last-child {
+    background-color: rgb(190, 255, 170);
+}

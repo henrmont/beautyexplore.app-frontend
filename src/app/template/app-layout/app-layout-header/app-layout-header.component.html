@@ -1,0 +1,73 @@
+<header>
+    <mat-toolbar color="primary" class="mat-elevation-z4">
+        <section>
+            <div class="menu">
+                <button mat-icon-button color="accent" (click)="onToggleSidenav()">
+                    <mat-icon [matBadge]="badge" matBadgeColor="warn">menu</mat-icon>
+                </button>
+                <button mat-icon-button color="accent" routerLink="/feed">
+                    <mat-icon>rss_feed</mat-icon>
+                </button>
+                <button mat-icon-button color="accent" routerLink="/global">
+                    <mat-icon>language</mat-icon>
+                </button>
+                <button mat-icon-button color="accent" routerLink="/shop">
+                    <mat-icon>sell</mat-icon>
+                </button>
+                <!-- <button mat-icon-button color="accent" routerLink="/watch">
+                    <mat-icon>ondemand_video</mat-icon>
+                </button> -->
+                <button mat-icon-button color="accent" class="shop" [matMenuTriggerFor]="menuShop">
+                    <mat-icon>storefront</mat-icon>
+                </button>
+                <mat-menu #menuShop="matMenu" yPosition="below" xPosition="after">
+                    <button mat-menu-item routerLink="/dashboard">
+                      <mat-icon>insights</mat-icon>
+                      <span>Dashboard</span>
+                    </button>
+                    <button mat-menu-item routerLink="/shop/henrmont">
+                      <mat-icon>store</mat-icon>
+                      <span>Loja</span>
+                    </button>
+                    <button mat-menu-item routerLink="/request">
+                        <mat-icon>local_shipping</mat-icon>
+                        <span>Pedidos</span>
+                    </button>
+                </mat-menu>
+                <button mat-icon-button color="accent" class="add" [matMenuTriggerFor]="menuAdd">
+                    <mat-icon>add_circle_outline</mat-icon>
+                </button>
+                <mat-menu #menuAdd="matMenu" yPosition="below" xPosition="after">
+                    <button mat-menu-item (click)="createPost()">
+                      <mat-icon>perm_media</mat-icon>
+                      <span>Postar status</span>
+                    </button>
+                    <button mat-menu-item (click)="createShopPost()">
+                      <mat-icon>loyalty</mat-icon>
+                      <span>Postar produto</span>
+                    </button>
+                    <!-- <button mat-menu-item>
+                      <mat-icon>ondemand_video</mat-icon>
+                      <span>Transmissão beauTV</span>
+                    </button> -->
+                </mat-menu>
+            </div>
+            <div class="search">
+                <form class="example-form">
+                    <input type="text"
+                            matInput
+                            [formControl]="myControl"
+                            [matAutocomplete]="auto">
+                    <mat-autocomplete #auto="matAutocomplete">
+                        <mat-option *ngFor="let option of options" [value]="option">
+                        {{option}}
+                        </mat-option>
+                    </mat-autocomplete>
+                </form>
+            </div>
+            <div class="logo">
+                <span>beautyexplore.app</span>
+            </div>
+        </section>
+    </mat-toolbar>
+</header>

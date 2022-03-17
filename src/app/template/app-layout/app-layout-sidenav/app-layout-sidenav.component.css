@@ -1,0 +1,138 @@
+:host {
+    overflow-y: hidden;
+}
+
+.mat-sidenav-container, .mat-sidenav-content, .mat-tab-body-content {
+    transform: none !important;
+}
+
+div.alias {
+    width: 90%;
+    padding-right: 10%;
+    background-color: rgb(200,200,200);
+    height: 90px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    color: rgb(50,50,50);
+    font-size: 20px;
+    font-family: 'Mukta', sans-serif;
+
+}
+
+div.photo {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+
+div.photo img {
+    width: 100px;
+    height: 100px;
+}
+
+div.name {
+    width: 90%;
+    padding-right: 10%;
+    height: 40px;
+    padding-top: 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    font-size: 17px;
+    font-family: 'Mukta', sans-serif;
+
+}
+
+div.notifications, div.messages {
+    margin: 1rem auto auto;
+    padding-bottom: 1rem;
+    width: 90%;
+    height: 32%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid rgb(130,130,130);
+    font-family: 'Titillium Web', sans-serif;
+}
+
+div.notifications div.buttons, div.messages div.buttons {
+    margin-top: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+div.notifications div.buttons button, div.messages div.buttons button {
+    background-color: rgb(230,50,50);
+    color: white;
+    font-family: 'Mukta', sans-serif;
+    font-size: 16px;
+}
+
+div.notifications div.buttons button mat-icon, div.messages div.buttons button mat-icon {
+    margin-right: 1rem;
+}
+
+div.notifications {
+    padding-top: 1rem;
+    border-top: 2px solid rgb(130,130,130);
+}
+
+div.notifications button.title, div.messages button.title {
+    font-size: 20px;
+    font-family: 'Mukta', sans-serif;
+    font-weight: 500;
+}
+
+div.notifications button.title mat-icon, div.messages button.title mat-icon {
+    vertical-align: -5px;
+    margin-right: 1rem;
+}
+
+div.notifications div.content, div.messages div.content {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: right;
+}
+
+div.notifications div.content button.delete, div.messages div.content button.delete {
+    background-color: rgb(200,10,10);
+    color: white;
+}
+
+div.notifications div.content div.item, div.messages div.content div.item {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div.notifications div.content div.item img, div.messages div.content div.item img {
+    width: 40px;
+}
+
+div.actions {
+    height: calc(25% - 150px);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+}
+
+div.actions button {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.actions mat-icon {
+    font-size: 30px;
+}

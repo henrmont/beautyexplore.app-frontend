@@ -1,0 +1,90 @@
+<div class="post mat-elevation-z8">
+    <div class="media">
+        <div class="title">
+            <div class="owner">
+                <img src="assets/demo/profile.png" class="mat-elevation-z4">
+                <div class="info">
+                    <span>@{{data.alias}}</span>
+                    <span><mat-icon>location_on</mat-icon> São Paulo</span>
+                </div>
+            </div>
+            <button mat-icon-button [matMenuTriggerFor]="menu" color="accent">
+                <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu" yPosition="below" xPosition="before">
+                <button mat-menu-item>
+                  <mat-icon>front_hand</mat-icon>
+                  <span>Denunciar</span>
+                </button>
+                <button mat-menu-item>
+                  <mat-icon>report_gmailerrorred</mat-icon>
+                  <span>Relatar um problema</span>
+                </button>
+                <button mat-menu-item>
+                  <mat-icon>alternate_email</mat-icon>
+                  <span>Ver marcações</span>
+                </button>
+            </mat-menu>
+        </div>
+        <gallery [id]="galleryId"
+            [thumb]="false"
+            [counter]="false">
+        </gallery>
+    </div>
+    <div class="resource">
+        <div class="desc">
+            {{data.description}}
+        </div>
+       
+        <div class="comments">
+            <div class="content">
+                <img src="assets/demo/profile3.png" class="mat-elevation-z4">
+                <div>
+                    <span>@bandeiramanoel (Manoel Bandeira)</span>
+                    <span>Teste de comentário 1</span>
+                </div>
+            </div>
+            <div class="content">
+                <img src="assets/demo/profile1.png" class="mat-elevation-z4">
+                <div>
+                    <span>@michelyxi (Michely Ximenes)</span>
+                    <span>Teste de comentário longo para saber se o alinhamento vertical está de acordo com as especificações, caso sim tudo ocorreu como o planejado.</span>
+                </div>
+            </div>
+            <div class="content">
+                <img src="assets/demo/profile2.png" class="mat-elevation-z4">
+                <div>
+                    <span>@nessaoliver (Vanessa Oliveira)</span>
+                    <span>Teste de comentário 3</span>
+                </div>
+            </div>
+            <div class="content">
+                <img src="assets/demo/profile.png" class="mat-elevation-z4">
+                <div>
+                    <span>@pauferoficial (Paula Ferreira)</span>
+                    <span>Esse dia foi tudo de bom amigos, vamos marcar para fazer novamente uma resenha desse tipo. Beijos.</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="actions">
+            <!-- <button mat-flat-button color="warn">
+                <mat-icon>shopping_cart</mat-icon>
+                Comprar
+            </button> -->
+            <!-- <button mat-icon-button [disabled]="!data.likes">
+                <mat-icon *ngIf="!data.likes" color="warn">thumb_up_off_alt</mat-icon>
+                <mat-icon *ngIf="data.likes" color="accent">thumb_up_off_alt</mat-icon>
+            </button> -->
+            <app-likes-button [data]="data.id"></app-likes-button>
+            <button mat-icon-button (click)="commentPost()" [disabled]="!data.comments">
+                <mat-icon *ngIf="!data.comments" color="warn">chat_bubble_outline</mat-icon>
+                <mat-icon *ngIf="data.comments" color="accent">chat_bubble_outline</mat-icon>
+            </button>
+            <button mat-icon-button>
+                <mat-icon color="accent">bookmark_border</mat-icon>
+            </button>
+        </div>
+        
+    </div>
+</div>        

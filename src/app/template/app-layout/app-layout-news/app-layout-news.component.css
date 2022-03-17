@@ -1,0 +1,117 @@
+:host {
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: calc(64px + 1rem);
+    right: 2.5rem;
+    z-index: 5;
+}
+
+@media screen and (max-width: 1200px) {
+    :host {
+        display: none;
+    }
+}
+
+mat-tab-group {
+    width: 100%;
+    height: 500px;
+}
+
+mat-tab {
+    height: 500px;
+}
+
+mat-tab span {
+    font-family: 'Mukta', sans-serif;
+}
+
+mat-icon.tabicon {
+    margin-right: .5rem;
+}
+
+div.item {
+    width: 100%;
+    height: 70px;
+    z-index: 3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+div.item img{
+    width: 50px;
+}
+
+div.item div.info{
+    height: auto;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+div.item div.info span:first-child {
+    font-family: 'Mukta', sans-serif;
+    font-size: 17px;
+}
+
+div.item div.info span:last-child {
+    font-size: 15px;
+    margin-top: 0.5rem;
+}
+
+div.item div.price{
+    height: auto;
+    width: auto;
+    display: flex;
+    justify-content: flex-end;
+    font-family: 'Mukta', sans-serif;
+}
+
+div.prod {
+    width: 90%;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+}
+
+div.prod button {
+    position: relative;
+    width: 80%;
+    height: 180px;
+    padding: 0;
+    border: 0;
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    border-radius: 0;
+}
+
+div.prod button div.price {
+    position: absolute;
+    bottom: 0;
+    width: 80%;
+    padding: 0 10%;
+    height: 50px;
+    background-color: rgba(0,0,0,.8);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  
+  div.prod button div.price span:first-child {
+    font-size: 15px;
+    color: white;
+  }
+  
+  div.prod button div.price span:last-child {
+    color: orange;
+    font-size: 20px;
+    text-shadow: 0 0 10px rgb(255, 190, 94);
+  }

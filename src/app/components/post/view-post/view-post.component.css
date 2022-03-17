@@ -1,0 +1,194 @@
+div.post {
+    display: grid;
+    grid-template-columns: 600px calc(100% - 600px);
+    width: 100%;
+    height: auto;
+    margin-top: 4rem;
+}
+
+div.post:first-child {
+    margin-top: 0;
+}
+
+div.post div {
+    width: 100%;
+    height: 600px;
+}
+
+div.post div.media {
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+
+div.post div.media div.title {
+    position: absolute;
+    top: 0;
+    width: 90%;
+    height: 70px;
+    padding: 0 5%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div.post div.media div.title div.owner{
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div.post div.media div.title div.owner img{
+    width: 50px;
+}
+
+div.post div.media div.title button{
+    color: white;
+}
+
+div.post div.media div.title div.owner div.info{
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-left: 1rem;
+    color: white;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+div.post div.media div.title div.owner div.info span:first-child {
+    font-family: 'Mukta', sans-serif;
+    font-size: 20px;
+}
+
+div.post div.media div.title div.owner div.info span:last-child mat-icon {
+    font-size: 15px;
+    vertical-align: -2px;
+    margin-top: 0.5rem;
+}
+
+div.post div.media gallery {
+    width: 600px;
+    height: 600px;
+}
+
+div.post div.media ng-image-slider {
+    margin-left: -1px;
+}
+
+div.post div.resource {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+div.post div.resource div {
+    width: 100%;
+}
+
+div.post div.resource div.desc {
+    width: 90%;
+    padding: 0 5%;
+    height: 70px;
+    background-color: rgb(30,30,30);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+div.post div.resource div.actions {
+    height: 70px;
+    background-color: rgb(30,30,30);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 20px;
+}
+
+div.post div.resource div.comments  {
+    height: calc(100% - 140px);
+    background-color: white;
+    overflow-y:scroll;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: flex-start;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+div.post div.resource div.comments div.content  {
+    height: auto;
+    margin-top: 1rem;
+    padding-bottom: 0.5rem;
+    width: 90%;
+    background-color: white;
+    overflow-y:scroll;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    overflow: hidden;
+    font-weight: 500;
+}
+
+div.post div.resource div.comments div.content:last-child  {
+    border-bottom: none;
+}
+
+div.post div.resource div.comments div.content img  {
+    width: 40px;
+}
+
+div.post div.resource div.comments div.content div  {
+    height: auto;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+div.post div.resource div.comments div.content span:first-child {
+    font-family: 'Mukta', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+div.post div.resource div.comment {
+    width: 100%;
+    /* padding: 0 5%; */
+    height: 100px;
+    background-color: rgba(0,0,0,0.3);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    justify-items: center;
+}
+
+div.post div.resource div.comment div.field {
+    margin: auto 0;
+    height: 100%;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.post div.resource div.comment div.field mat-form-field {
+    margin-top: 1rem;
+    height: auto;
+    width: 100%;
+}
+
+
+div.post div.resource div.comment div.emoji {
+    height: 100%;
+    width: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

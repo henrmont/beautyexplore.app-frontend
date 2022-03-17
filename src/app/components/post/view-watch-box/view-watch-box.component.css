@@ -1,0 +1,16 @@
+div.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+div.title span {
+    font-size: 25px;
+    font-family: 'Mukta', sans-serif;
+}
+
+div.title span mat-icon {
+    vertical-align: -4px;
+    margin-right: 1rem;
+}

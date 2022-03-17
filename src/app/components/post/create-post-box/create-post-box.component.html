@@ -1,0 +1,182 @@
+<div class="title">
+  <span><mat-icon>perm_media</mat-icon> Postar status</span>
+  <button mat-mini-fab color="warn" (click)="close()">
+      <mat-icon>close</mat-icon>
+  </button>
+</div>
+
+<mat-stepper orientation="vertical" [linear]="isLinear" #stepper>
+
+<mat-step [stepControl]="firstFormGroup" color="accent">
+  <form [formGroup]="firstFormGroup">
+    <ng-template matStepLabel>Mídia</ng-template>
+    
+    <div class="media">
+
+      <!-- <input type="hidden" formControlName="files" [value]="checkFile"> -->
+
+      <button mat-raised-button class="photo" (click)="imageUpload.click()" [disabled]="limit">
+        <input type="file" (change)="onImageChange($event)" [accept]="imageFileType" class="file-input" #imageUpload>
+        <mat-icon>collections</mat-icon><br>
+        <span>Adicionar Foto</span>
+      </button>
+
+      <button mat-raised-button class="video" (click)="videoUpload.click()" [disabled]="limit">
+        <input type="file" (change)="onVideoChange($event)" [accept]="videoFileType" class="file-input" #videoUpload>
+        <mat-icon>video_library</mat-icon><br>
+        <span>Adicionar Video</span>
+      </button>
+
+      <div class="thumbnail">
+        <div *ngFor="let image of images; let i = index">
+          <img [src]="image" (click)="onItemDelete(i)">
+        </div>
+      </div>
+    </div>
+
+    <div class="buttons">
+      <button mat-button matStepperNext color="accent">Próximo</button>
+    </div>
+  </form>
+</mat-step>
+
+<mat-step [stepControl]="secondFormGroup" color="accent">
+  <form [formGroup]="secondFormGroup">
+    <ng-template matStepLabel>Informação</ng-template>
+
+    <div class="info">
+
+      <mat-form-field appearance="outline" color="accent">
+        <mat-label>Descrição</mat-label>
+        <textarea matInput placeholder="Descrição" rows="7" formControlName="description"></textarea>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" color="accent">
+        <mat-label>Tags</mat-label>
+        <mat-chip-list #tagChipList aria-label="Tags">
+          <mat-chip *ngFor="let tag of tags" (removed)="removeTag(tag)">
+            {{ tag }}
+            <button matChipRemove>
+              <mat-icon>cancel</mat-icon>
+            </button>
+          </mat-chip>
+          <input [matChipInputFor]="tagChipList"
+                 [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                 [matChipInputAddOnBlur]="addOnBlur"
+                 (matChipInputTokenEnd)="addTag($event)"
+                 formControlName="tags">
+        </mat-chip-list>
+      </mat-form-field>
+
+    </div>
+
+    <!-- <mat-form-field appearance="fill">
+      <mat-label>Address</mat-label>
+      <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY"
+             required>
+    </mat-form-field> -->
+    <div class="buttons">
+      <button mat-button matStepperPrevious color="warn">Voltar</button>
+      <button mat-button matStepperNext color="accent">Próximo</button>
+    </div>
+  </form>
+</mat-step>
+
+<mat-step [stepControl]="thirdFormGroup" color="accent">
+  <form [formGroup]="thirdFormGroup">
+    <ng-template matStepLabel>Visibilidade</ng-template>
+
+    <div class="visibility">
+
+      <mat-form-field appearance="outline" color="accent">
+        <mat-label>Visibilidade</mat-label>
+        <mat-select #selectIcon formControlName="public" name="public" required>
+          <mat-select-trigger>
+            <mat-icon>{{ selectionVisibilityIcon }}</mat-icon>
+            {{ selectionVisibilityOption }}
+          </mat-select-trigger>
+          <mat-option [value]="option.value" *ngFor="let option of visibility" [disabled]="option.disa" (click)="selectionOption(option.viewValue, option.viewIcon);selectCustonOption(option.viewValue)">
+            <mat-icon>{{ option.viewIcon }}</mat-icon>
+            {{ option.viewValue }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" color="accent">
+        <mat-label>Personalizado</mat-label>
+        <mat-chip-list #custonChipList aria-label="Custons">
+          <mat-chip *ngFor="let custon of custons" (removed)="removeCustom(custon)">
+            {{ custon }}
+            <button matChipRemove>
+              <mat-icon>cancel</mat-icon>
+            </button>
+          </mat-chip>
+          <input #custonInput [matChipInputFor]="custonChipList"
+                 [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                 [matChipInputAddOnBlur]="addOnBlur"
+                 (matChipInputTokenEnd)="addCustom($event)"
+                 formControlName="custons"
+                 [disabled]="custonOption">
+        </mat-chip-list>
+      </mat-form-field>
+
+      <div class="check">
+        <h2>Comentários</h2>
+        <!-- <mat-checkbox color="accent" value="true" formControlName="like" name="like">Permitir Curtidas</mat-checkbox> -->
+        <mat-checkbox color="accent" value="true" formControlName="comment" name="comment">Permitir Comentários</mat-checkbox>
+      </div>
+    </div>
+
+    <div class="buttons">
+      <button mat-button matStepperPrevious color="warn">Voltar</button>
+      <button mat-button matStepperNext color="accent">Próximo</button>
+    </div>
+  </form>
+</mat-step>
+
+<mat-step [stepControl]="fourthFormGroup" color="accent">
+  <form [formGroup]="fourthFormGroup">
+    <ng-template matStepLabel>Período</ng-template>
+
+    <div class="time">
+      <mat-radio-group aria-label="Select an option" formControlName="expire" name="expire" required>
+        <h2>Tipo da postagem</h2>
+        <mat-radio-button [value]="false" color="accent" [checked]="true" (click)="selectTimeOption(0)">Permanente</mat-radio-button>
+        <mat-radio-button [value]="true" color="accent" (click)="selectTimeOption(1)">Limitado</mat-radio-button>
+      </mat-radio-group>
+
+      <div>
+        <h2>Período da postagem</h2>
+        <mat-form-field appearance="outline" color="accent">
+          <mat-label>Período</mat-label>
+          <mat-select [disabled]="timeOption" formControlName="time" name="time">
+            <mat-option [value]="time.value" *ngFor="let time of times">
+              {{ time.viewValue }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      
+
+      <div class="check">
+        <h2>Permanência da postagem</h2>
+        <mat-checkbox color="accent" [disabled]="timeOption" value="true" formControlName="erase" name="erase">Apagar post após o período</mat-checkbox>
+      </div>
+    </div>
+
+    <div class="buttons">
+      <button mat-button matStepperPrevious color="warn">Voltar</button>
+    </div>
+  </form>
+</mat-step>
+
+</mat-stepper>
+<div class="post">
+  <button mat-flat-button color="accent"
+    [disabled]="firstFormGroup.status == 'INVALID' || secondFormGroup.status == 'INVALID' || thirdFormGroup.status == 'INVALID' || fourthFormGroup.status == 'INVALID'" 
+    (click)="onSubmit()">
+    <mat-icon>post_add</mat-icon>
+    Postar
+  </button>
+</div>
+  

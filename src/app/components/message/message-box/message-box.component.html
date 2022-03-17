@@ -1,0 +1,65 @@
+<div class="title">
+    <span><mat-icon>mail_outline</mat-icon> Mensagens</span>
+    <button mat-mini-fab color="warn" (click)="close()">
+        <mat-icon>close</mat-icon>
+    </button>
+</div>
+<section class="messages">
+    <div class="menu">
+        <mat-list role="list">
+            <mat-list-item role="listitem">
+                <button mat-button color="accent" routerLink="/messages/1">
+                    <img src="assets/demo/profile.png" class="mat-elevation-z4">
+                    @pauferoficial
+                </button>
+            </mat-list-item>
+            <mat-list-item role="listitem">
+                <button mat-button color="accent">
+                    <img src="assets/demo/profile1.png" class="mat-elevation-z4">
+                    @michelyxi
+                </button>
+            </mat-list-item>
+            <mat-list-item role="listitem">
+                <button mat-button color="accent">
+                    <img src="assets/demo/profile2.png" class="mat-elevation-z4">
+                    @nessaoliver
+                </button>
+            </mat-list-item>
+            <mat-list-item role="listitem">
+                <button mat-button color="accent">
+                    <img src="assets/demo/profile3.png" class="mat-elevation-z4">
+                    @bandeiramanoel
+                </button>
+            </mat-list-item>
+            
+        </mat-list>
+    </div>
+    <div class="content">
+        <div class="box-messages">
+            <div class="receive">
+                <span>Oi amiga sua danada, onde foi que tu comprou aquele brinco maravilho que vc tava usando no show da Anitta?</span>
+            </div>
+            <div class="send">
+                <span>Oi amiga, comprei na Romanel</span>
+            </div>
+            <div class="send">
+                <span>Tá em promoção brinco com a bolsa</span>
+            </div>
+            <div class="send">
+                <span>299</span>
+            </div>
+            <div class="receive">
+                <span>Nossa que show, vou lá comprar hj</span>
+            </div>
+            <div class="receive">
+                <span>Vou usar no niver da minha irmã</span>
+            </div>
+        </div>
+        <div class="input">
+            <mat-form-field color="accent" appearance="outline">
+                <mat-label>Comentar</mat-label>
+                <textarea matInput rows="2"></textarea>
+            </mat-form-field>
+        </div>
+    </div>
+</section>

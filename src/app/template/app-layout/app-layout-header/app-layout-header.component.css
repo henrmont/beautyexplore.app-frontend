@@ -1,0 +1,132 @@
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+}
+
+mat-toolbar {
+    padding: 0;
+}
+
+mat-toolbar section {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-image: linear-gradient(to bottom, rgba(255,255,255,0.2), rgba(0,0,0,0.5));
+}
+
+mat-toolbar div.menu {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    justify-items: center;
+}
+
+mat-toolbar div.menu button {
+    transition: .4s;
+}
+
+mat-toolbar div.menu div.divider {
+    width: 2px;
+    height: 80%;
+    background-image: linear-gradient(to bottom, rgba(250,250,250,0), rgb(180,180,180), rgba(250,250,250,0) );
+}
+
+mat-toolbar div.menu button:focus {
+    background-color: none;
+}
+
+@media screen and (max-width: 900px) {
+    mat-toolbar div.menu button {
+        margin-right: .5rem;
+    }
+}
+
+mat-toolbar div.menu button:hover {
+    text-shadow: 0 0 5px white;
+    color:white;
+}
+
+mat-toolbar div.menu button.add:hover {
+    text-shadow: 0 0 5px rgb(240, 240, 110);
+    color:rgb(240, 240, 110);
+}
+
+mat-toolbar div.menu button.shop:hover {
+    text-shadow: 0 0 5px rgb(140, 240, 110);
+    color:rgb(140, 240, 110);
+}
+
+mat-toolbar div.menu button mat-icon {
+    font-size: 1.5rem;
+}
+
+mat-toolbar div.search {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    height: 100%;
+}
+
+mat-toolbar div.search form  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    width: 100%;
+    margin: auto;
+    height: 100%;
+}
+
+mat-toolbar div.search form input {
+    width: 60%;
+    height: 60%;
+    font-size: 16px;
+    border-radius: 10px;
+    background-color: rgba(250,250,250,0.8);
+    border: none;
+    padding: 0 2.5rem;
+    background-image: url('../../../../assets/img/lupa.png');
+    background-size: 5%;
+    background-position-x: 10px;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    color: rgb(100,100,100);
+    font-style: italic;
+}
+
+mat-toolbar div.search form input:focus {
+    outline-width: 0;
+    border-radius: 10px 10px 0 0;
+}
+
+mat-toolbar div.search form mat-autocomplete {
+    margin-top: 50px;
+}
+
+mat-toolbar div.logo {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+mat-toolbar div.logo span {
+    font-family: 'Spartan', sans-serif;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 1rem 0;
+    transition: .4s;
+}
+
+@media screen and (max-width: 900px) {
+    mat-toolbar div.logo span {
+        font-size: 1.3rem;
+    }
+}
+
+mat-toolbar div.logo span::first-letter {
+    color: rgb(251,80,80);
+}

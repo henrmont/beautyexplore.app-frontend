@@ -1,0 +1,77 @@
+<section class="profile" *ngIf="alias">
+  <img src="assets/demo/profile.png" class="mat-elevation-z8">
+  <div class="title">
+      <span>@pauferoficial</span>
+      <span>Paula Ferrreira</span>
+      <div class="gradient"></div>
+  </div>
+  <div class="info">
+      <span>32 posts</span>
+      <button mat-flat-button color="accent" (click)="openFollowing()">100 seguidores</button>
+      <button mat-flat-button color="accent">Seguir</button>
+  </div>
+</section>
+
+<section class="itens">
+
+  <div class="mat-elevation-z8">
+    <button mat-button class="item" (click)="openModal()" style="background-image: url(assets/demo/demo1.png);">
+      <div class="price">
+        <span>BRL</span>
+        <span>9,99</span>
+      </div>
+    </button>
+  </div>
+  
+    <div class="mat-elevation-z8">
+      <button mat-button class="item" (click)="openModal()">
+        <div class="price">
+          <span>BRL</span>
+          <span>1.800,00</span>
+        </div>
+        <video src="assets/demo/video2.mp4" autoplay [muted]="true"></video>
+      </button>
+    </div>
+    <div class="mat-elevation-z8">
+      <button mat-button class="item" (click)="openModal()" style="background-image: url(assets/demo/demo2.png);">
+        <div class="price">
+          <span>BRL</span>
+          <span>12,50</span>
+        </div>
+      </button>
+    </div>
+    <div class="mat-elevation-z8">
+      <button mat-button class="item" (click)="openModal()" style="background-image: url(assets/demo/demo3.png);">
+        <div class="price">
+          <span>BRL</span>
+          <span>400,00</span>
+        </div>
+      </button>
+    </div>
+    <div class="mat-elevation-z8">
+      <button mat-button class="item" (click)="openModal()" style="background-image: url(assets/demo/demo4.png);">
+        <div class="price">
+          <span>BRL</span>
+          <span>29,99</span>
+        </div>
+      </button>
+    </div>
+    <div class="mat-elevation-z8">
+      <button mat-button class="item" (click)="openModal()" style="background-image: url(assets/demo/demo1.png);">
+        <div class="price">
+          <span>BRL</span>
+          <span>199,99</span>
+        </div>
+      </button>
+    </div>
+    <div class="mat-elevation-z8">
+      <button mat-button class="item" (click)="openModal()">
+        <div class="price">
+          <span>BRL</span>
+          <span>17.299,99</span>
+        </div>
+        <video src="assets/demo/video.mp4" autoplay [muted]="true"></video>
+      </button>
+    </div>
+    
+</section>

@@ -1,0 +1,35 @@
+div.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div.title span {
+    font-size: 20px;
+    font-family: 'Mukta', sans-serif;
+}
+
+div.title span mat-icon {
+    vertical-align: -4px;
+    margin-right: 1rem;
+}
+
+section.comment {
+    margin-top: 2rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+section.comment mat-form-field {
+    width: 100%;
+}
+
+section.comment div.resource {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+

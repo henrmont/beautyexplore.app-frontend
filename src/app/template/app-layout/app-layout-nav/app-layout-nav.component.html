@@ -1,0 +1,19 @@
+<div *ngIf="destack; then thenBlock else elseBlock"></div>
+<ng-template #thenBlock>
+    <main style="align-items: flex-start;">
+        <router-outlet></router-outlet>
+    </main>
+</ng-template>
+<ng-template #elseBlock>
+    <main style="align-items: center;">
+        <router-outlet></router-outlet>
+    </main>
+</ng-template>
+<div class="cart">
+    <button *ngIf="delivery" mat-fab class="delivery" routerLink="/delivery">
+        <mat-icon>local_shipping</mat-icon>
+    </button>
+    <button *ngIf="cart" mat-fab class="cart" routerLink="/cart">
+        <mat-icon>shopping_cart</mat-icon>
+    </button>
+</div>

@@ -1,0 +1,4 @@
+<button mat-icon-button [matBadge]="countLikes" matBadgeColor="accent" (click)="like()">
+    <mat-icon *ngIf="isLiked" appLiked color="accent">thumb_up_off_alt</mat-icon>
+    <mat-icon *ngIf="!isLiked" color="accent">thumb_up_off_alt</mat-icon>
+</button>

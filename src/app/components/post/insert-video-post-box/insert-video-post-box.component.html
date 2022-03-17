@@ -1,0 +1,10 @@
+<h3>Pré visualização do vídeo</h3>
+<input type="file" class="file-input" #fileInput>
+<div class="video-container">
+    <video [src]="url" *ngIf="format==='video' && url" height="400" controls></video>
+      <!-- <img [src]="cropImgPreview" /> -->
+    <button mat-raised-button color="accent" (click)="uploadVideo()">
+        <mat-icon>video_call</mat-icon>
+        Adicionar video
+    </button>
+</div>

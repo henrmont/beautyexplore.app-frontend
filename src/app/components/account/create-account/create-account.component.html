@@ -1,0 +1,29 @@
+<div class="create">
+    <h1>Criar conta</h1>
+    <form #form='ngForm' (ngSubmit)="onSubmit()">
+        <div>
+            <mat-form-field class="example-full-width">
+                <mat-label>Email</mat-label>
+                <input matInput name="email" type="email" [(ngModel)]="user.username" autocomplete="off" required>
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <mat-label>Usuário</mat-label>
+                <input matInput name="alias" type="text" [(ngModel)]="user.alias" autocomplete="off" required>
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field class="example-full-width">
+                <mat-label>Senha</mat-label>
+                <input matInput name="password" type="password" [(ngModel)]="user.password" autocomplete="off" required>
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <mat-label required>Confirmar Senha</mat-label>
+                <input matInput name="cpassword" type="password" [(ngModel)]="cpassword" autocomplete="off" required>
+            </mat-form-field>
+        </div>
+        <div>
+            <span><mat-checkbox #checkbox color="primary" class="example-margin"></mat-checkbox>Li e aceito os <a routerLink="">Termos de serviço</a></span>
+            <button mat-raised-button type="submit" [disabled]="form.form.invalid || !checkbox.checked">Criar conta</button>
+        </div>
+    </form>
+</div>
